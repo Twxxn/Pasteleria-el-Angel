@@ -82,7 +82,7 @@ La base está diseñada en MySQL e incluye relaciones entre productos, insumos, 
 
 ---
 
-## 🌐 Uso Local (XAMPP)
+## 🌐 El proyecto fue desarrollado inicialmente para entorno local (XAMPP) y posteriormente desplegado en un hosting gratuito (InfinityFree) para fines académicos y de demostración.
 
 1. Coloca el proyecto dentro de `C:/xampp/htdocs/`
 2. Activa Apache y MySQL desde el panel de XAMPP
@@ -106,7 +106,8 @@ INSERT INTO usuarios (nombre, correo, contraseña, tipo_usuario)
 VALUES ('Admin', 'admin@angel.com', 'admin123', 'administrador');
 ```
 
-> ⚠️ Nota: las contraseñas en este proyecto no están cifradas debido a su uso académico y en entorno local. Para entornos reales se recomienda implementar `password_hash()`.
+🔐 Seguridad de contraseñas
+Las contraseñas de los usuarios se almacenan utilizando hash seguro con password_hash(), cumpliendo buenas prácticas básicas de seguridad incluso en entorno académico.
 
 ---
 
@@ -135,7 +136,7 @@ VALUES ('Admin', 'admin@angel.com', 'admin123', 'administrador');
 **Desarrollado por:**  
 Angel Israel 🧑‍💻  
 Maria Aurora 💗  
-Antonio Izamael
+Antonio Izamael 🐧
 
 Proyecto académico realizado en 2025 para el curso de Ingeniería de Software.
 
