@@ -1,0 +1,124 @@
+body {
+  background-color: #fddde6;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-login {
+  background-color: #fff0f5;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.form-login h2 {
+  color: #c2185b;
+  margin-bottom: 20px;
+}
+
+.form-login input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.form-login button {
+  background-color: #c2185b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  background-color: yellow; /* Solo para prueba */
+}
+
+.menu-toggle {
+  z-index: 9999; /* Muy alto para que esté por encima del header */
+}
+
+.btn-volver {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #ffc9c9;
+  color: #333;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #f08080;
+  color: white;
+}
+
+/* =========================================
+   PARCHE RESPONSIVO PARA LOGIN
+   Agrega esto AL FINAL de css/login.css
+   ========================================= */
+
+/* Ajustes generales para evitar que se desborde */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* En móviles, el formulario ocupa casi todo el ancho */
+@media screen and (max-width: 768px) {
+    body {
+        /* Centrar el formulario vertical y horizontalmente */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-size: cover; /* Si tienes imagen de fondo */
+    }
+
+    .form-login {
+        width: 90%; /* Ocupa el 90% de la pantalla */
+        max-width: 400px; /* Pero no más de 400px */
+        margin: 20px auto; /* Centrado automático */
+        padding: 20px; /* Espacio interior para que no se vea apretado */
+        box-sizing: border-box; /* Evita que el padding rompa el ancho */
+    }
+
+    .form-login h2 {
+        font-size: 1.5em; /* Título un poco más chico */
+    }
+
+    .form-login input {
+        width: 100%; /* Inputs ocupan todo el ancho disponible */
+        box-sizing: border-box; /* Vital para que no se salgan del cuadro */
+        padding: 12px; /* Más fácil de tocar con el dedo */
+        margin-bottom: 15px;
+        font-size: 16px; /* Evita que el iPhone haga zoom al escribir */
+    }
+
+    .form-login button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    .btn-volver {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px;
+    }
+}

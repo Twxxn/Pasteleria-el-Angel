@@ -1,0 +1,26 @@
+.perfil-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: #ffeef3;
+    border-radius: 10px;
+    text-align: left;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.perfil-container h1 {
+    text-align: center;
+    color: #bf4079;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #bf4079;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+}

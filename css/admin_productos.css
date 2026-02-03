@@ -1,0 +1,100 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: #ffe9e9;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #d44c5c;
+  margin-bottom: 25px;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+form input[type="file"] {
+  margin-top: 10px;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #f08080;
+  outline: none;
+}
+
+textarea {
+  height: 90px;
+  resize: vertical;
+}
+
+button {
+  display: block;
+  width: 100%;
+  background-color: #f08080;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d95f6a;
+}
+
+.btn-volver {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #ffc9c9;
+  color: #333;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #f08080;
+  color: white;
+}
+
+.centrar-boton {
+  text-align: center;
+  margin-top: 30px;
+}
+
+

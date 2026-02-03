@@ -1,0 +1,90 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff4f6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h2.titulo-admin {
+    text-align: center;
+    color: #bf4079;
+    margin-bottom: 30px;
+}
+
+.formulario-insumos-multiple {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.grupo-insumo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.grupo-insumo label {
+    flex: 1 0 20%;
+    font-weight: bold;
+    color: #4a1c2b;
+}
+
+.grupo-insumo select,
+.grupo-insumo input {
+    flex: 1 0 35%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 5px 0;
+}
+
+.unidad-medida {
+    flex: 1 0 15%;
+    font-weight: bold;
+    color: #bf4079;
+    text-align: center;
+}
+
+button[type="submit"],
+.btn-agregar {
+    display: block;
+    margin: 25px auto 10px;
+    background-color: #d48db0;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover,
+.btn-agregar:hover {
+    background-color: #bf4079;
+}
+
+.centrar-boton {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-volver {
+    background-color: #d48db0;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-volver:hover {
+    background-color: #bf4079;
+}

@@ -1,0 +1,275 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fddde6;
+  padding: 30px;
+}
+
+h2 {
+  text-align: center;
+  color: #d95f6a;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+table th {
+  background-color: #ffc9c9;
+  color: #333;
+}
+
+table td {
+  background-color: #fff0f5;
+}
+
+form {
+  display: inline;
+}
+
+.btn-pedido {
+  background-color: #f08080;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.btn-pedido:hover {
+  background-color: #e06666;
+}
+
+.vacio {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 1.2em;
+  color: #888;
+}
+
+.carrito-vacio {
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #d95f6a;
+  font-size: 1.4em;
+}
+
+.resumen-carrito {
+  text-align: center;
+  margin-top: 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.btn-finalizar {
+  background-color: #f08080;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.btn-finalizar:hover {
+  background-color: #d96666;
+}
+
+.btn-volver {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #ffc9c9;
+  color: #333;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #f08080;
+  color: white;
+}
+/* Estilos base para escritorio */
+.contenedor-carrito-responsivo {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+table.tabla-carrito {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.tabla-carrito th, .tabla-carrito td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.tabla-carrito th {
+    background-color: #ffc9c9; /* Tu color rosa */
+    color: #333;
+}
+
+/* Inputs y Botones */
+.form-cantidad {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn-actualizar {
+    background-color: #888;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-eliminar {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.resumen-carrito {
+    text-align: right;
+    margin-top: 20px;
+    padding: 20px;
+    background: #fffaf5;
+    border-radius: 10px;
+}
+
+.btn-finalizar {
+    background-color: #f08080; /* Tu color principal */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin-top: 15px;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-left: 15px;
+}
+
+/* ==============================================
+   AQUÍ COMIENZA LA RESPONSIVIDAD (MODO MÓVIL)
+   ============================================== */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Desaparecemos los encabezados de la tabla */
+    .tabla-carrito thead {
+        display: none;
+    }
+
+    /* 2. Convertimos la tabla en bloques */
+    .tabla-carrito, .tabla-carrito tbody, .tabla-carrito tr, .tabla-carrito td {
+        display: block;
+        width: 100%;
+    }
+
+    /* 3. Convertimos cada FILA en una TARJETA */
+    .tabla-carrito tr {
+        margin-bottom: 20px;
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        overflow: hidden; /* Para que los bordes redondeados funcionen */
+    }
+
+    /* 4. Estilo de cada celda dentro de la tarjeta */
+    .tabla-carrito td {
+        text-align: right; /* Contenido a la derecha */
+        padding: 12px 15px;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+        display: flex;
+        justify-content: space-between; /* Separa título y contenido */
+        align-items: center;
+    }
+
+    /* 5. AGREGAR ETIQUETAS AUTOMÁTICAS (La magia) */
+    /* Esto pone "Precio:", "Total:" antes del valor usando el atributo data-label del PHP */
+    .tabla-carrito td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #d95f6a; /* Tu color rojo oscuro */
+        text-transform: uppercase;
+        font-size: 0.85em;
+    }
+
+    /* Ajustes específicos */
+    .tabla-carrito td:last-child {
+        border-bottom: none;
+        justify-content: center; /* Botón eliminar centrado */
+    }
+    
+    /* El nombre del producto más grande y destacado */
+    .tabla-carrito td.nombre-producto {
+        background-color: #ffc9c9;
+        color: #333;
+        font-weight: bold;
+        text-align: center;
+        display: block; /* Que ocupe todo el ancho */
+    }
+    
+    .tabla-carrito td.nombre-producto::before {
+        display: none; /* No poner etiqueta "Producto" arriba */
+    }
+
+    .btn-eliminar {
+        width: 100%; /* Botón grande para el dedo */
+        padding: 12px;
+    }
+    
+    .resumen-carrito {
+        text-align: center;
+    }
+    
+    .botones-finales {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+

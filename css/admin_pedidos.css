@@ -1,0 +1,124 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #bf4079;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+thead {
+    background-color: #f9d5e5;
+    color: #4a1c2b;
+}
+
+th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #f1d1dc;
+}
+
+tbody tr:hover {
+    background-color: #fff0f5;
+}
+
+select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+button {
+    background-color: #bf4079;
+    color: #fff;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 8px;
+}
+
+button:hover {
+    background-color: #a13465;
+}
+
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th {
+        display: none;
+    }
+
+    td {
+        position: relative;
+        padding-left: 50%;
+        margin-bottom: 10px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 16px;
+        font-weight: bold;
+        color: #bf4079;
+    }
+}
+
+.btn-volver {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #e7afe8;
+  color: #333;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #f08080;
+  color: white;
+}
+
+.centrar-boton {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-filtro {
+  display: inline-block;
+  background-color: #d48db0;
+  color: white;
+  padding: 8px 16px;
+  margin: 0 5px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-filtro:hover {
+  background-color: #bf4079;
+}
+
+

@@ -1,0 +1,134 @@
+/* CONTENEDOR SUPERIOR DE ÍCONOS + BOTÓN + MENÚ */
+.nicono-navbar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 10px;
+}
+
+/* ÍCONOS */
+.nicono-navbar img {
+  width: 24px;
+  height: 24px;
+  filter: invert(0);
+}
+
+/* BOTÓN CERRAR SESIÓN */
+.boton-sesion {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+
+.boton-sesion .btn-sesion {
+  background-color: #E88CA5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Segoe UI', sans-serif;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.boton-sesion .btn-sesion:hover {
+  background-color: #c56a8e;
+}
+
+/* BOTÓN HAMBURGUESA (ADMIN) */
+.menu-toggle {
+  position: absolute;
+  top: 35px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #000;
+  border: none;
+  padding: 6px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+}
+
+/* MENÚ DESPLEGABLE DE ADMIN */
+.admin-menu {
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 15px;
+  background-color: #00272D;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.admin-menu a {
+  display: block;
+  color: white;
+  padding: 6px 12px;
+  text-decoration: none;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.admin-menu a:hover {
+  background-color: #0C7E7E;
+  border-radius: 6px;
+}
+
+
+/* Alerta*/
+#modal-alerta {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+
+#modal-alerta .modal-contenido {
+  background-color: #fff0f5;
+  width: 90%;
+  max-width: 420px;
+  margin: 12% auto;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#modal-alerta h3 {
+  color: #c70039;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#modal-alerta p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#modal-alerta button {
+  padding: 10px 15px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #d88aa2;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+#modal-alerta button:hover {
+  background-color: #b85c84;
+}

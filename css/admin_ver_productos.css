@@ -1,0 +1,94 @@
+body {
+  background-color: #ffeef0; /* rosado claro que combina */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+
+.titulo-admin {
+  text-align: center;
+  font-size: 2em;
+  color: #d95f6a;
+  margin-top: 40px;
+}
+
+.contenedor-productos-admin {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+}
+
+.tarjeta-admin {
+  background-color: #fff;
+  width: 220px;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.img-admin {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.btn-inactivar {
+  margin-top: 10px;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-inactivar:hover {
+  background-color: #e04c4c;
+}
+
+.tarjeta-admin {
+  background-color: #fff8f9;
+  border: 1px solid #ffd6dc;
+}
+
+.btn-activar {
+  margin-top: 10px;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-activar:hover {
+  background-color: #e04c4c;
+}
+
+.btn-volver {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #ffc9c9;
+  color: #333;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #f08080;
+  color: white;
+}
+
+.centrar-boton {
+  text-align: center;
+  margin-top: 30px;
+}

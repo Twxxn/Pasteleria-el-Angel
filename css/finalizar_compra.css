@@ -1,0 +1,66 @@
+/* --- INICIO DE CÓDIGO RESPONSIVO PARA FINALIZAR COMPRA --- */
+
+@media screen and (max-width: 768px) {
+
+    /* 1. ARREGLAR EL FORMULARIO (Lo más importante) */
+    /* Quitamos el ancho fijo de 400px y le decimos que ocupe lo que pueda */
+    form {
+        width: 100% !important; /* Forza a usar el ancho de la pantalla */
+        padding: 15px;          /* Un poco menos de relleno para ganar espacio */
+        box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+        box-shadow: none;       /* Opcional: quitamos la sombra en móvil para diseño más plano */
+    }
+
+    /* 2. ARREGLAR LA TABLA (Resumen del pedido) */
+    /* Convertimos la tabla en tarjetas, igual que hicimos en el carrito */
+    table {
+        width: 100%;
+        border: 0;
+    }
+
+    table thead {
+        display: none; /* Ocultamos los encabezados de la tabla */
+    }
+
+    table tr {
+        display: block;
+        margin-bottom: 15px;
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    table td {
+        display: block;
+        text-align: right;
+        font-size: 14px;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%; /* Espacio para la etiqueta */
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+
+    /* Esto pone el título (Ej: "Producto") a la izquierda */
+    table td::before {
+        content: attr(data-label); /* IMPORTANTE: Requiere el cambio en HTML abajo */
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        text-align: left;
+        font-weight: bold;
+        color: #c2185b; /* Tu color rosa fuerte */
+    }
+
+    /* 3. AJUSTES GENERALES */
+    body {
+        padding: 10px; /* Menos margen en el borde del celular */
+    }
+    
+    h2, h3 {
+        font-size: 1.5rem; /* Títulos un poco más chicos */
+    }
+}

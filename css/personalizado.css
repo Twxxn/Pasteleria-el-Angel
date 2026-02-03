@@ -1,0 +1,222 @@
+/* personalizado.css - Versión Final Corregida */
+
+/* 1. RESET Y ESTILOS BASE */
+* {
+    box-sizing: border-box; /* IMPORTANTE: Evita que los inputs se salgan del ancho */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff7f7;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: #bf5e7a;
+    margin-bottom: 25px;
+}
+
+/* 2. FORMULARIO PRINCIPAL */
+form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffe4e4; /* Tu color rosa original */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(200, 100, 120, 0.2);
+}
+
+.form-group {
+    margin-bottom: 15px; /* Espacio entre preguntas */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* 3. INPUTS Y SELECTS */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #fff;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #bf5e7a;
+    box-shadow: 0 0 5px rgba(191, 94, 122, 0.3);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* 4. PRECIOS Y MENSAJES */
+.precio-display {
+    background-color: #fff;
+    color: #bf5e7a;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px dashed #bf5e7a;
+    margin-top: 5px;
+}
+
+.mensaje-contacto {
+    text-align: center;
+    margin-top: 30px;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#info_transferencia {
+    background-color: #ffe9f1;
+    color: #444;
+    border: 1px solid #e3b1c0;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* 5. BOTONES */
+.btn-volver-inicio {
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color: #fff;
+    color: #bf5e7a;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 2px solid #bf5e7a;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-volver-inicio:hover {
+    background-color: #bf5e7a;
+    color: #fff;
+}
+
+.btn-confirmar {
+    background-color: #c94e6f;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-confirmar:hover {
+    background-color: #a93c5a;
+}
+
+/* 6. LAYOUT PARA PC (Fechas lado a lado) */
+.row-fechas {
+    display: flex;
+    gap: 15px;
+}
+.half {
+    flex: 1; /* Ocupa el 50% cada uno */
+}
+
+/* --- 7. ESTILOS DEL MODAL (VENTANA EMERGENTE) --- */
+/* Esto es lo que faltaba para que el botón funcione */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.5); /* Fondo oscuro transparente */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-top: 5px solid #c94e6f;
+}
+
+.modal-content h3 {
+    color: #bf5e7a;
+    margin-top: 0;
+}
+
+.modal-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-si {
+    background-color: #c94e6f; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 25px; 
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-no {
+    background-color: #ccc; 
+    color: #333; 
+    border: none; 
+    padding: 10px 25px; 
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- 8. MODO RESPONSIVO (CELULAR) --- */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        padding: 20px; /* Menos relleno en celular para ganar espacio */
+    }
+
+    /* En celular, las fechas se ponen una debajo de otra */
+    .row-fechas {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}

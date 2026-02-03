@@ -1,0 +1,200 @@
+/* mis_pedidos.css */
+
+/* 1. Estilos Generales (Tus colores originales) */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.contenedor-principal {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #bf4079;
+    margin-bottom: 30px;
+}
+
+/* 2. Botón Volver */
+.centrar-boton {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-volver {
+    display: inline-block;
+    background-color: #d48db0;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-volver:hover {
+    background-color: #bf4079;
+}
+
+/* 3. Títulos de Estado (Pendiente, Completado...) */
+.titulo-estado {
+    color: #bf4079;
+    border-bottom: 2px dashed #f9d5e5;
+    padding-bottom: 5px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* 4. TARJETAS DE PEDIDO (El cambio principal) */
+/* En lugar de una tabla gigante, usamos cajas individuales */
+.tarjeta-pedido {
+    background-color: #ffffff;
+    border: 1px solid #f9d5e5;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+/* El encabezado gris/rosita dentro de la tarjeta */
+.encabezado-pedido {
+    background-color: #fff0f5; /* Tu color hover original */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: grid;
+    /* Esto hace que se acomoden en columnas en PC */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.encabezado-pedido p {
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+/* 5. Etiquetas de Estado con colores */
+.estado-etiqueta {
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    display: inline-block;
+}
+
+.estado-pendiente { background-color: #fce4ec; color: #888; border: 1px solid #ddd; }
+.estado-completado { background-color: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
+.estado-cancelado { background-color: #ffebee; color: #c62828; border: 1px solid #ffcdd2; }
+
+
+/* 6. TABLA DE DETALLES (Los productos dentro del pedido) */
+.tabla-detalle {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff7fa; /* Tu color de tabla anidada */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.tabla-detalle th {
+    background-color: #fcd6e1; /* Tu color de th anidado */
+    color: #4a1c2b;
+    padding: 12px;
+    text-align: left;
+}
+
+.tabla-detalle td {
+    padding: 12px;
+    border-bottom: 1px solid #fce4ec;
+    color: #555;
+}
+
+/* Estilos para detalles personalizados (textos) */
+.info-personalizado {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px dashed #d48db0;
+}
+.info-personalizado p {
+    margin: 5px 0;
+    border-bottom: 1px dotted #f0f0f0;
+}
+
+.precio-destacado {
+    font-size: 1.2em;
+    color: #bf4079;
+    font-weight: bold;
+    margin-top: 10px !important;
+    border: none !important;
+}
+
+/* --- 7. MODO RESPONSIVO (CELULAR) --- */
+@media screen and (max-width: 768px) {
+    
+    /* En celular, el encabezado se pone en una sola columna */
+    .encabezado-pedido {
+        grid-template-columns: 1fr;
+    }
+
+    /* Transformamos la tabla de detalles en tarjetas */
+    .tabla-detalle, .tabla-detalle tbody, .tabla-detalle tr, .tabla-detalle td {
+        display: block;
+        width: 100%;
+    }
+
+    .tabla-detalle thead {
+        display: none; /* Ocultamos encabezados */
+    }
+
+    .tabla-detalle tr {
+        margin-bottom: 15px;
+        background-color: #fff;
+        border: 1px solid #f9d5e5;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    }
+
+    .tabla-detalle td {
+        text-align: right; /* Texto a la derecha */
+        padding-left: 50%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    /* El truco del data-label que ya tenías, aplicado aquí */
+    .tabla-detalle td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #bf4079; /* Tu color principal */
+        text-align: left;
+    }
+
+    /* Ajuste para el total final */
+    .td-total-label { display: none !important; }
+    
+    .td-total-valor {
+        background-color: #fff0f5;
+        font-size: 1.2em;
+        justify-content: center !important;
+        font-weight: bold;
+        color: #bf4079;
+    }
+    
+    .td-total-valor::before {
+        content: "Total Final: " !important;
+        margin-right: 10px;
+        color: #333;
+    }
+}

@@ -1,0 +1,135 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff5f8;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.titulo-admin {
+    text-align: center;
+    color: #bf4079;
+    margin-bottom: 30px;
+}
+
+.formulario-admin {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-admin label {
+    font-weight: bold;
+    color: #444;
+}
+
+.formulario-admin input,
+.formulario-admin select {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Estilizar título */
+.titulo-admin {
+    text-align: center;
+    color: #bf4079;
+    font-size: 26px;
+    margin-top: 30px;
+}
+
+.formulario-admin button {
+    background-color: #d48db0;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-admin button:hover {
+    background-color: #bf4079;
+}
+
+.centrar-boton {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-volver {
+    background-color: #d48db0;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-volver:hover {
+    background-color: #bf4079;
+}
+
+@media (max-width: 600px) {
+    .formulario-admin {
+        padding: 15px;
+    }
+}
+
+.tabla-insumos {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tabla-insumos th {
+    background-color: #f9d5e5;
+    color: #4a1c2b;
+    padding: 12px;
+    text-align: left;
+}
+
+.tabla-insumos td {
+    padding: 12px;
+    border-bottom: 1px solid #f0d0dc;
+}
+
+.tabla-insumos tr:hover {
+    background-color: #fff0f5;
+}
+
+
+.formulario-insumos-multiple {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.grupo-insumo {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.unidad-medida {
+    font-weight: bold;
+    color: #bf4079;
+}
